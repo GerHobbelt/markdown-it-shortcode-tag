@@ -70,10 +70,11 @@ __shortcodes__
 
 __options__
 - __interpolator__ - optional, function that interpolates an attribute value given **unquoted**
-  and surrounded by an  interpolation marker `#{ }`.  
+  and surrounded by an interpolation marker `#{ }`.  
   Defaults to looking up the enviroment value: `(expr, env) => env[expr]`.
   - __expr__ - string content of the curly braces.
   - __env__ - the enviroment variable passed to markdown-it in a `md.render(content, env)`.
+
 
 ### Translation from tag attributes to `attrs` object properties
 
@@ -214,3 +215,4 @@ see [LICENSE](https://github.com/ccprog/markdown-it-shortcode-tag/blob/master/LI
 [1]: https://github.com/markdown-it/markdown-it#init-with-presets-and-options
 [2]: https://html.spec.whatwg.org/multipage/syntax.html#start-tags
 [3]: https://html.spec.whatwg.org/multipage/syntax.html#syntax-attributes
+

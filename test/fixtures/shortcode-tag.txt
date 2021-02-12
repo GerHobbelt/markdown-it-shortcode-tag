@@ -1,0 +1,67 @@
+Testing the plugin at a single specific setting, holistic-like...
+
+... at block level:
+
+.
+# Hello Shortcode
+
+<standard first second="string" third= 'other' fourth =3.7 fifth=#{local} sixth="non#{local}" seventh=#{buggered} >
+
+<unknown attr>
+
+</standard>
+.
+<h1>Hello Shortcode</h1>
+<p><pre>
+Params:
+first: true (boolean)
+second: string (string)
+third: other (string)
+fourth: 3.7 (number)
+fifth: interpolated(test) (string)
+sixth: nontest (string)
+seventh: interpolated(undefined) (string)
+Env:
+local: test (string)
+state_block: [object Object] (object)
+</pre>
+</p><unknown attr>
+</standard>
+.
+
+Inline use:
+
+.
+# Hello Shortcode (Inline)
+
+It is <standard first second="string" third= 'other' fourth =3.7>
+.
+<h1>Hello Shortcode (Inline)</h1>
+<p>It is <pre>
+Params:
+first: true (boolean)
+second: string (string)
+third: other (string)
+fourth: 3.7 (number)
+Env:
+local: test (string)
+state_block: [object Object] (object)
+</pre></p>
+.
+
+and passing through unknown shortcodes unscathed:
+
+.
+# Hello Shortcode
+
+<careless thing>
+
+<unknown attr>ignore this</unknown>
+
+that is not </standard>
+.
+<h1>Hello Shortcode</h1>
+<careless thing>
+<p><unknown attr>ignore this</unknown></p>
+<p>that is not </standard></p>
+.

@@ -1,4 +1,6 @@
-*~
-tests/
-.travis.yml
-.jshintrc
+/.github
+support/
+.nyc_output
+coverage/
+Makefile
+.*
