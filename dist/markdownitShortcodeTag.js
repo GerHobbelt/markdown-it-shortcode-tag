@@ -1,4 +1,4 @@
-/*! markdown-it-shortcode-tag 1.1.0-1 https://github.com//GerHobbelt/markdown-it-shortcode-tag @license MIT */
+/*! markdown-it-shortcode-tag 1.1.0-2 https://github.com//GerHobbelt/markdown-it-shortcode-tag @license MIT */
 
 function shortcode_plugin(md, shortcodes, options) {
   options = options || {};
